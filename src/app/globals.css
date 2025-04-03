@@ -1,6 +1,28 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  
+  /* Slate 계열 */
+  --color-slate-100: #F1F5F9;
+  --color-slate-200: #E2E8F0;
+  --color-slate-300: #CBD5E1;
+  --color-slate-400: #94A3B8;
+  --color-slate-500: #64748B;
+  --color-slate-800: #1E293B;
+  --color-slate-900: #0F172A;
+
+  /* Violet */
+  --color-violet-100: #EDE9FE;
+  --color-violet-600: #7C3AED;
+
+  /* Rose */
+  --color-rose-500: #F43F5E;
+
+  /* Lime */
+  --color-lime-300: #BEF264;
+
+  /* Amber */
+  --color-amber-800: #92400E;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -8,6 +30,21 @@
     --background: #0a0a0a;
     --foreground: #ededed;
   }
+}
+
+/* 기본 font 설정 -> 나눔스퀘어 볼드,레귤러 */
+@font-face {
+  font-family: 'NanumSquare';
+  src: url('/fonts/NanumSquareR.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'NanumSquare';
+  src: url('/fonts/NanumSquareB.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
 }
 
 html,
@@ -19,7 +56,7 @@ body {
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'NanumSquare', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   line-height: 1.5;
