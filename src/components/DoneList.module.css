@@ -1,0 +1,12 @@
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.empty {
+  color: #9ca3af; /* slate-400 */
+  font-size: 16px;
+  text-align: center;
+  padding: 32px 0;
+}
