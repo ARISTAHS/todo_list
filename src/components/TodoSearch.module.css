@@ -4,9 +4,12 @@
   justify-content: center;
   gap: 12px;
   margin: 24px 0;
+  height: 56px;
 }
 
 .input {
+  max-width: 1016px;
+  height: 100%;
   flex: 1;
   padding: 12px 20px;
   font-size: 16px;
@@ -14,24 +17,22 @@
   border-radius: 9999px;
   outline: none;
   background-color: #fff;
-  transition: border-color 0.2s;
-}
-
-.input:focus {
-  border-color: #7c3aed; /* 보라색 포커스 효과 */
 }
 
 .button {
+  max-width: 168px;
+  height: 56px;
   padding: 12px 20px;
   font-size: 16px;
   background-color: #f1f5f9;
   border: 2px solid #1e293b;
-  border-radius: 9999px;
+  border-radius: 100%;
   cursor: pointer;
   transition: 0.2s;
 }
 
 .button:hover {
-  background-color: #e2e8f0;
+  background-color: #7c3aed;
   border-color: #7c3aed;
+  color: #fff;
 }

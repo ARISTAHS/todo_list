@@ -82,8 +82,7 @@ ul, ol {
 
 input[type=text]{
   outline: none;
-  width: 100%;
-  border: none;
+  /* width: 100%; */
 }
 
 input:focus{outline: none;}
@@ -91,7 +90,6 @@ input:focus{outline: none;}
 button{
   cursor: pointer;
   border: none;
-  /* background-color: #fff; */
 }
 
 button:focus{border: none;}

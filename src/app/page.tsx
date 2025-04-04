@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import TodoForm from '@/components/TodoSearch';
+import TodoSearch from '@/components/TodoSearch';
 import TodoList from '@/components/TodoList';
 import DoneList from '@/components/DoneList';
 import { TodoItemType } from '@/types/todo';
@@ -46,7 +46,7 @@ export default function HomePage() {
 
   return (
     <main className={styles.main}>
-      <TodoForm onAdd={handleAdd} />
+      <TodoSearch onAdd={handleAdd} />
 
       <div className={styles.lists}>
         <section className={styles.listSection}>
