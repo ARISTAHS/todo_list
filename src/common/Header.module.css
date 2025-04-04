@@ -1,0 +1,13 @@
+.header{
+  width: 1920px;
+  height: 60px;
+}
+
+.header h1{
+  width: 120px;
+  height: 40px;
+}
+
+a.logo{
+  display: inline-block;
+}
