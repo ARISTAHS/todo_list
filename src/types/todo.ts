@@ -4,5 +4,7 @@ export type TodoStatus = 'todo' | 'done';
 export interface TodoItemType {
   id: string;
   title: string;
-  status: TodoStatus;
+  status: 'todo' | 'done';
+  memo: string;
+  image: string;
 }

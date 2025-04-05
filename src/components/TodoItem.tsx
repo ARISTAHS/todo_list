@@ -7,9 +7,10 @@ import styles from './TodoItem.module.css';
 interface TodoItemProps {
   item: TodoItemType;
   onToggle: (id: string) => void;
+  onDelete: (id: string) => void;
 }
 
-export default function TodoItem({ item, onToggle }: TodoItemProps) {
+export default function TodoItem({ item, onToggle, onDelete }: TodoItemProps) {
   const isDone = item.status === 'done';
 
   return (
@@ -17,17 +18,35 @@ export default function TodoItem({ item, onToggle }: TodoItemProps) {
       <div
         className={isDone ? styles.doneItem : styles.todoItem}
         onClick={(e) => {
-          e.stopPropagation(); // 링크 클릭 시 체크 이벤트 막기
+          e.stopPropagation();
         }}
       >
-        <span className={styles.checkIcon} onClick={(e) => {
-          e.preventDefault();  // 링크 이동 방지
-          e.stopPropagation(); // 상위 div onClick 방지
-          onToggle(item.id);   // 체크박스 기능 유지
-        }}>
+        {/* 체크 아이콘 */}
+        <span
+          className={styles.checkIcon}
+          onClick={(e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            onToggle(item.id);
+          }}
+        >
           {isDone ? '✔️' : '⚪'}
         </span>
+
+        {/* 제목 */}
         <span className={styles.title}>{item.title}</span>
+
+        {/* 삭제 버튼 (오른쪽 끝) */}
+        <button
+          className={styles.deleteBtn}
+          onClick={(e) => {
+            e.preventDefault(); // 링크 이동 방지
+            e.stopPropagation(); // 상위 div 방지
+            onDelete(item.id);
+          }}
+        >
+          ✕
+        </button>
       </div>
     </Link>
   );

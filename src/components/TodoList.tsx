@@ -9,9 +9,10 @@ import emptyImg from '/public/images/Type=Todo, Size=Large.png';
 interface Props {
   todos: TodoItemType[];
   onToggle: (id: string) => void;
+  onDelete: (id: string) => void;
 }
 
-export default function TodoList({ todos, onToggle }: Props) {
+export default function TodoList({ todos, onToggle, onDelete }: Props) {
   if (todos.filter((t) => t.status === 'todo').length === 0) {
     return (
       <div className={styles.empty}>
@@ -26,7 +27,7 @@ export default function TodoList({ todos, onToggle }: Props) {
       {todos.map((todo) =>
         todo.status === 'todo' ? (
           <li key={todo.id}>
-            <TodoItem item={todo} onToggle={onToggle} />
+            <TodoItem item={todo} onToggle={onToggle} onDelete={onDelete} />
           </li>
         ) : null
       )}
