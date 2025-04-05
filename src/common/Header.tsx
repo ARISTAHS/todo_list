@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import styles from "./header.module.css";
+import styles from "./Header.module.css";
 import logo from "/public/images/Size=Large.png"
 
 export default function Header(){
